@@ -1,5 +1,5 @@
 from animals import Animal
-from animals import Swimming
+# from animals import Swimming
 from animals import Identifiable
 
 

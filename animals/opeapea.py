@@ -3,7 +3,7 @@ from animals import Swimming
 from animals import Identifiable
 
 
-class Ulae(Animal, Swimming, Identifiable):
+class Opeapea(Animal, Swimming, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a")

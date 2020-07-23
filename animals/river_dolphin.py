@@ -1,19 +1,17 @@
 from animals import Animal
-from animals import Identifiable
-from animals import Swimming
-from characteristics import Aquatic
-from characteristics import Freshwater
-from characteristics import Saltwater
+from characteristics import Identifiable
+# from characteristics import Swimming
+# from characteristics import Freshwater
+# from characteristics import Saltwater
 
 
-class RiverDolphin(Animal, Freshwater, Saltwater, Swimming, Aquatic, Identifiable):
+class RiverDolphin(Animal, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "River dolphin")
-        Freshwater.__init__(self)
-        Swimming.__init__(self)
+        # Freshwater.__init__(self)
+        # Swimming.__init__(self)
         Identifiable.__init__(self)
-        Aquatic.__init__(self)
         self.__prey = {"Trout", "Mackarel", "Salmon", "Sardine"}
 
     @property

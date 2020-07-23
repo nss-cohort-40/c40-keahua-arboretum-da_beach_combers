@@ -1,5 +1,5 @@
 from animals import Animal
-from animals import Flying
+# from animals import Flying
 from animals import Identifiable
 
 
