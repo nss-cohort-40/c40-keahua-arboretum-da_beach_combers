@@ -1,7 +1,6 @@
-from animals import Animal
+from .animal import Animal
 from characteristics import Flying
 from characteristics import Identifiable
-from characteristics import Terrestrial
 
 
 class NeneGoose(Animal, Flying, Terrestrial, Identifiable):

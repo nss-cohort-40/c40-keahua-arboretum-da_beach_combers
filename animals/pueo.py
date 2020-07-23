@@ -1,6 +1,5 @@
-from animals import Animal
+from .animal import Animal
 from characteristics import Flying
-from characteristics import Terrestrial
 from characteristics import Identifiable
 
 

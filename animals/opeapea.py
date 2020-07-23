@@ -1,6 +1,5 @@
-from animals import Animal
+from .animal import Animal
 from characteristics import Swimming
-from characteristics import Aquatic
 from characteristics import Identifiable
 
 
