@@ -1,9 +1,10 @@
 from animals import Animal
 from animals import Walking
 from animals import Identifiable
+from animals import Terrestrial
 
 
-class GoldDustDayGecko(Animal, Walking, Identifiable):
+class GoldDustDayGecko(Animal, Walking, Terrestrial, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Gold Dust Day Gecko")
