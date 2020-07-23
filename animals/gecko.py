@@ -1,13 +1,13 @@
 from animals import Animal
-from animals import Freshwater
+from animals import Terrestrial
 from animals import Identifiable
 
 
-class GoldDustDayGecko(Animal, Freshwater, Identifiable):
+class GoldDustDayGecko(Animal, Terrestrial, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Gold Dust Day Gecko")
-        # Freshwater.__init__(self)
+        Terrestrial.__init__(self)
         Identifiable.__init__(self)
         self.__prey = {"Silkworms", "Hornworms", "Crickets", "Roaches"}
 
@@ -22,4 +22,4 @@ class GoldDustDayGecko(Animal, Freshwater, Identifiable):
             print(f'The gecko rejects the {prey}')
 
     def __str__(self):
-        return f'Dolphin {self.id}. creeky noise via mouth....!'
+        return f'Gecko {self.id}. creeky noise via mouth....!'
