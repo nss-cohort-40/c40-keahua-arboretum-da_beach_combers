@@ -1,6 +1,6 @@
-from animals import Animal
-from animals import Swimming
-from animals import Identifiable
+from .animal import Animal
+from characteristics import Swimming
+from characteristics import Identifiable
 
 
 class Opeapea(Animal, Swimming, Identifiable):
