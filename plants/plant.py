@@ -1,5 +1,9 @@
 class Plant:
 
-    def __init__(self, species, season):
+    def __init__(self, name, species, sunlight, seeds, insecticide):
       self.species = species
-      self.peak_season = season
+      self.name = name
+      self.species = species
+      self.sunlight = sunlight
+      self.seeds = seeds
+      self.insecticide = insecticide
