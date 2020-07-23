@@ -1,6 +1,6 @@
 from animals import Animal
-from animals import Freshwater
-from animals import Identifiable
+from characteristics import Freshwater
+from characteristics import Identifiable
 
 class RiverDolphin(Animal, Freshwater, Identifiable):
 
