@@ -1,9 +1,10 @@
 from animals import Animal
-from animals import Swimming
-from animals import Identifiable
+from characteristics import Swimming
+from characteristics import Aquatic
+from characteristics import Identifiable
 
 
-class Ulae(Animal, Swimming, Identifiable):
+class Opeapea(Animal, Swimming, Aquatic, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a")

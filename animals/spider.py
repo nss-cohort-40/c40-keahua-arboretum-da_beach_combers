@@ -1,9 +1,10 @@
 from animals import Animal
-from animals import Walking
-from animals import Identifiable
+from characteristics import Walking
+from characteristics import Terrestrial
+from characteristics import Identifiable
 
 
-class HappyFaceSpider(Animal, Walking, Identifiable):
+class HappyFaceSpider(Animal, Walking, Terrestrial, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a")

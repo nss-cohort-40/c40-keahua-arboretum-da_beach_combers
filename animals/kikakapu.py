@@ -1,9 +1,10 @@
 from animals import Animal
-from animals import Swimming
-from animals import Identifiable
+from characteristics import Aquatic
+from characteristics import Swimming
+from characteristics import Identifiable
 
 
-class Kikakapu(Animal, Swimming, Identifiable):
+class Kikakapu(Animal, Aquatic, Swimming, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Kīkākapu")

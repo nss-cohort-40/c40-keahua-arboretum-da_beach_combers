@@ -1,9 +1,10 @@
 from animals import Animal
-from animals import Flying
-from animals import Identifiable
+from characteristics import Flying
+from characteristics import Terrestrial
+from characteristics import Identifiable
 
 
-class Pueo(Animal, Flying, Identifiable):
+class Pueo(Animal, Flying, Terrestrial, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Pueo")

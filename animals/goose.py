@@ -1,9 +1,10 @@
 from animals import Animal
-from animals import Flying
-from animals import Identifiable
+from characteristics import Flying
+from characteristics import Identifiable
+from characteristics import Terrestrial
 
 
-class NeneGoose(Animal, Flying, Identifiable):
+class NeneGoose(Animal, Flying, Terrestrial, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Nene Goose")

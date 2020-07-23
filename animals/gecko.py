@@ -1,7 +1,7 @@
 from animals import Animal
-from animals import Walking
-from animals import Identifiable
-from animals import Terrestrial
+from characteristics import Walking
+from characteristics import Terrestrial
+from characteristics import Identifiable
 
 
 class GoldDustDayGecko(Animal, Walking, Terrestrial, Identifiable):
