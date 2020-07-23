@@ -1,6 +1,6 @@
-from animals import Animal
-from animals import Walking
-from animals import Identifiable
+from .animal import Animal
+from characteristics import Walking
+from characteristics import Identifiable
 
 
 class HappyFaceSpider(Animal, Walking, Identifiable):
