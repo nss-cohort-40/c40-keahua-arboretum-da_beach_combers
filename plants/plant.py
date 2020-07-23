@@ -1,6 +1,6 @@
 class Plant:
 
-    def __init__(self, name, species, sunlight, seeds, insecticide):
+    def __init__(self, sunlight, seeds, insecticide):
       self.name = name
       self.species = species
       self.sunlight = sunlight
