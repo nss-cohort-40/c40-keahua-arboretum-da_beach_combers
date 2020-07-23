@@ -1,6 +1,6 @@
-from animals import Animal
-from animals import Flying
-from animals import Identifiable
+from .animal import Animal
+from characteristics import Flying
+from characteristics import Identifiable
 
 
 class NeneGoose(Animal, Flying, Identifiable):
