@@ -8,7 +8,7 @@ from .flying import Flying
 # from .light_rainfall import LightRainfall
 # from .no_shade import NoShade
 # from .shady import Shady
-# from .stagnant import Stagnant
+from .stagnant import Stagnant
 from .swimming import Swimming
 from .walking import Walking
 from .terrestrial import Terrestrial
