@@ -1,12 +1,9 @@
 class Plant:
 
-    def __init__(self, species, sunlight, seeds, insecticide):
+    def __init__(self, species):
       self.species = species
-      self.sunlight = sunlight
-      self.seeds = seeds
-      self.insecticide = insecticide
 
-    @property
+""" @property
     def seeds(self):
       return self.__seeds
 
@@ -14,15 +11,12 @@ class Plant:
     def species(self):
       return self.__species
 
-    @property
-    def sunlight(self):
-      return self.__sunlight
 
     @property
     def insecticide(self):
       return self.__insecticide
 
-
+"""
 
 
 

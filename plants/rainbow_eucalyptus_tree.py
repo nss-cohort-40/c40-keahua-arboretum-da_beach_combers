@@ -7,6 +7,6 @@ class Rainbow_Eucalyptus_Tree(Plant, Shady):
         Plant.__init__(self, "Blue Jade Vine")
         Shady.__init__(self)
         self.sunlight = "Shade"
-        self.insecticide = "Low"
+        self.insecticide_resistance = "Low"
         self.location = "Forest"
         self.seeds = 8

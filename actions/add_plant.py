@@ -1,9 +1,9 @@
 from plants import blue_jade_vine
-from plants import mountain_apple_tree
+""" from plants import mountain_apple_tree
 from plants import rainbow_eucalyptus_tree
-from plants import silversword
+from plants import silversword """
 
-def release_plant(arboretum):
+def add_plant(arboretum):
     plant = None
 
     print("1. Blue Jade Vine")
@@ -24,15 +24,13 @@ def release_plant(arboretum):
 
     if choice == "4":
         plant = silversword()
-   
 
-
-    for index, environment in enumerate(arboretum.environments):
-        print(f'{index + 1}. Environment {environment.id}')
+    for index, river in enumerate(arboretum.rivers):
+        print(f'{index + 1}. River {river.id}')
 
     print("Cultivate the plant into which environment?")
     choice = input("> ")
 
-    arboretum.environments[int(choice) - 1].plant.append(plant)
+    arboretum.rivers[int(choice) - 1].plants.append(plant)
 
 
