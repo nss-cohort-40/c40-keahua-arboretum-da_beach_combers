@@ -1,12 +1,14 @@
 from .animal import Animal
+from characteristics import Aquatic
 from characteristics import Swimming
 from characteristics import Identifiable
 
 
-class Kikakapu(Animal, Swimming, Identifiable):
+class Kikakapu(Animal, Aquatic, Swimming, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Kīkākapu")
+        Aquatic.__init__(self)
         Swimming.__init__(self)
         Identifiable.__init__(self)
         self.__prey = {"reef invertebrate", "Water Bugs"}
