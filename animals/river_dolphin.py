@@ -6,7 +6,7 @@ from characteristics import Aquatic
 from characteristics import Saltwater
 
 
-class RiverDolphin(Animal, Identifiable, Freshwater, Saltwater, Swimming, Aquatic):
+class RiverDolphin(Animal, Identifiable, Freshwater, Saltwater, Swimming):
 
     def __init__(self):
         Animal.__init__(self, "River dolphin")

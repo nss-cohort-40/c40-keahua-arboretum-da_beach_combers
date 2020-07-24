@@ -7,6 +7,27 @@ from animals import RiverDolphin
 from animals import HappyFaceSpider
 from animals import Ulae
 
+def choose_environment(arboretum, animal):
+    environments = []
+
+    environments.extend(arboretum.coastlines)
+    environments.extend(arboretum.forests)
+    environments.extend(arboretum.grasslands)
+    environments.extend(arboretum.mountains)
+    environments.extend(arboretum.rivers)
+    environments.extend(arboretum.swamps)
+
+    for index, environment in enumerate(environments):
+        print(f'{index + 1} {environment.name} {environment.animals}')
+    
+    print(f'Which Biome?')
+    choice = input('>')
+
+    try:
+        environments[int(choice) -1].add_animal(animal)
+    except IndexError:
+        choose_environment(arboretum, animal)
+
 
 def release_animal(arboretum):
     animal = None
@@ -46,10 +67,11 @@ def release_animal(arboretum):
     if choice == "8":
         animal = Ulae()
 
-    for index, river in enumerate(arboretum.rivers):
-        print(f'{index + 1}. River {river.id}')
+    choose_environment(arboretum, animal)
+    # for index, river in enumerate(arboretum.rivers):
+        # print(f'{index + 1}. River {river.id}')
 
-    print("Release the animal into which biome?")
-    choice = input("> ")
+    # print("Release the animal into which biome?")
+    # choice = input("> ")
 
-    arboretum.rivers[int(choice) - 1].animals.append(animal)
+    # arboretum.rivers[int(choice) - 1].animals.append(animal)

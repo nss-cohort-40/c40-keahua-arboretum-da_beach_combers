@@ -12,44 +12,37 @@ def cultivate(arboretum):
 
     if choice == "1":
         plant = Blue_Jade_Vine()
-        for index, grassland in enumerate(arboretum.grassland):
-            print(f'{index + 1}. Grassland {grassland.id}')
-          
-         print("Cultivate the plant into which biome?")
-            choice = input("> ")
-
-        arboretum.grassland[int(choice) - 1].plants.append(plant)
-        for index, Swamp in enumerate(arboretum.swamp):
+        for index, swamp in enumerate(arboretum.swamps):
             print(f'{index + 1}. Swamp {swamp.id}')
           
-         print("Cultivate the plant into which biome?")
-            choice = input("> ")
+    print("Cultivate the plant into which biome?")
+    choice = input("> ")
 
-        arboretum.swamp[int(choice) - 1].plants.append(plant)
+    arboretum.swamps[int(choice) - 1].plants.append(plant)
     if choice == "2":
         plant = Mountain_Apple_Tree()
-        for index, mountain in enumerate(arboretum.mountain):
+        for index, mountain in enumerate(arboretum.mountains):
             print(f'{index + 1}. Mountain {mountain.id}')
           
-         print("Cultivate the plant into which biome?")
-            choice = input("> ")
+    print("Cultivate the plant into which biome?")
+    choice = input("> ")
 
-        arboretum.mountain[int(choice) - 1].plants.append(plant)
+    arboretum.mountains[int(choice) - 1].plants.append(plant)
     if choice == "3":
         plant = Rainbow_Eucalyptus_Tree()
-        for index, forest in enumerate(arboretum.forest):
+        for index, forest in enumerate(arboretum.forests):
             print(f'{index + 1}. River {forest.id}')
           
-         print("Cultivate the plant into which biome?")
-            choice = input("> ")
+    print("Cultivate the plant into which biome?")
+    choice = input("> ")
 
-        arboretum.forest[int(choice) - 1].plants.append(plant)
+    arboretum.forests[int(choice) - 1].plants.append(plant)
     if choice == "4":
         plant = silversword()
-        for index, grassland in enumerate(arboretum.grassland):
+        for index, grassland in enumerate(arboretum.grasslands):
             print(f'{index + 1}. Grassland {grassland.id}')
           
-         print("Cultivate the plant into which biome?")
-            choice = input("> ")
+    print("Cultivate the plant into which biome?")
+    choice = input("> ")
 
-        arboretum.grassland[int(choice) - 1].plants.append(plant)
+    arboretum.grasslands[int(choice) - 1].plants.append(plant)
