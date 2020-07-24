@@ -2,7 +2,7 @@
 from .environment import Environment
 
 
-class River(Environment):
+class Mountain(Environment):
 
     def __init__(self):
         super().__init__()
@@ -12,8 +12,7 @@ class River(Environment):
     #         if animal.aquatic and animal.cell_type == "hypertonic":
     #             self.animals.append(animal)
     #     except AttributeError:
-    #         raise AttributeError(
-    #             "Cannot add non-aquatic, or saltwater animals to a river")
+    #         raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
 
     # def add_plant(self, plant):
     #     try:
