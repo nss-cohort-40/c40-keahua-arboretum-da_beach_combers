@@ -1,12 +1,12 @@
 from .plant import Plant
 from characteristics import Shady 
+from characteristics import Identifiable
 
-class silversword(Plant, Shady):
+class silversword(Plant, Shady, Identifiable):
 
-    def __init__(self, location, seeds, sunlight, insecticide):
-        Plant.__init__(self, "Blue Jade Vine")
+    def __init__(self):
+        Plant.__init__(self, "Silversword")
         Shady.__init__(self)
-        self.sunlight = "Full"
-        self.insecticide = "High"
-        self.location = "Grassland"
+        Identifiable.__init__(self)
+        self.insecticide_resistance = "High"
         self.seeds = 22

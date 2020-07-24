@@ -1,16 +1,12 @@
 from .plant import Plant
 from characteristics import Shady 
+from characteristics import Identifiable
 
-class Mountain_Apple_Tree(Plant, Shady):
+class Mountain_Apple_Tree(Plant, Shady, Identifiable):
 
-    def __init__(self, location, seeds, sunlight, insecticide):
-        Plant.__init__(self, "Blue Jade Vine")
+    def __init__(self):
+        Plant.__init__(self, "Mountain Apple Tree")
         Shady.__init__(self)
-        self.sunlight = "Partial"
-        self.insecticide = "High"
-        self.location = "Mountain"
+        Identifiable.__init__(self)
+        self.insecticide_resistance = "High"
         self.seeds = 17
-
-    @property 
-    def plant(self):
-        return self.__plant
