@@ -21,7 +21,7 @@ def cultivate(arboretum):
     for river in arboretum.rivers:
         for index, animal in enumerate(river.animals):
           if animal.species == "River dolphin":
-          print(f'{index + 1}. River Dolphin {animal.id}')
+                print(f'{index + 1}. River Dolphin {animal.id}')
           
     print("Cultivate the plant into which biome?")
     choice = input("> ")

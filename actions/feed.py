@@ -1,3 +1,6 @@
+from animals import *
+import os
+
 def feed_animal(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("1. Gold Dust Day Gecko")
@@ -11,6 +14,13 @@ def feed_animal(arboretum):
 
     choice = input("Choose animal to feed. > ")
 
+    def food_list(animal):
+        print(animal)
+        i = 1
+        for snack in animal.prey:
+             print(f'{i}. {snack}')
+             i+=1
+
     if choice == "1":
       pass
     if choice == "2":
@@ -22,15 +32,7 @@ def feed_animal(arboretum):
     if choice == "5":
       pass
     if choice == "6":
-
-    for river in arboretum.rivers:
-        for index, animal in enumerate(river.animals):
-          if animal.species == "River dolphin":
-          print(f'{index + 1}. River Dolphin {animal.id}')
-
-    choice = input("> ")
-
-        choice = input("What is on the menu for the River Dolphin today?")
+      food_list(RiverDolphin)
 
     if choice == "7":
       pass
