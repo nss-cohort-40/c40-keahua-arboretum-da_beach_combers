@@ -53,3 +53,4 @@ def release_animal(arboretum):
     choice = input("> ")
 
     arboretum.rivers[int(choice) - 1].animals.append(animal)
+    arboretum.river_dolphins.append(animal)

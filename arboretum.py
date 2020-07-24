@@ -8,3 +8,4 @@ class Arboretum:
         self.grasslands = []
         self.mountains = []
         self.swamps = []
+        self.river_dolphins = []
