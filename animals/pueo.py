@@ -1,12 +1,14 @@
 from .animal import Animal
+from characteristics import Terrestrial
 from characteristics import Flying
 from characteristics import Identifiable
 
 
-class Pueo(Animal, Flying, Identifiable):
+class Pueo(Animal, Terrestrial, Flying, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Pueo")
+        Terrestrial.__init__(self)
         Flying.__init__(self)
         Identifiable.__init__(self)
         self.__prey = {"mice", "insects"}
