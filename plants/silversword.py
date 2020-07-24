@@ -3,10 +3,10 @@ from characteristics import Shady
 
 class silversword(Plant, Shady):
 
-    def __init__(self):
-        Plant.__init__(self, "silversword")
+    def __init__(self, location, seeds, sunlight, insecticide):
+        Plant.__init__(self, "Blue Jade Vine")
         Shady.__init__(self)
-
-    @property 
-    def plant(self):
-        return self.__plant
+        self.sunlight = "Full"
+        self.insecticide = "High"
+        self.location = "Grassland"
+        self.seeds = 22

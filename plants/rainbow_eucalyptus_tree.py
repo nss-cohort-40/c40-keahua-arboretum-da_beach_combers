@@ -3,10 +3,10 @@ from characteristics import Shady
 
 class Rainbow_Eucalyptus_Tree(Plant, Shady):
 
-    def __init__(self):
-        Plant.__init__(self, "Rainbow Eucalyptus Tree")
+    def __init__(self, location, seeds, sunlight, insecticide):
+        Plant.__init__(self, "Blue Jade Vine")
         Shady.__init__(self)
-
-    @property 
-    def plant(self):
-        return self.__plant
+        self.sunlight = "Shade"
+        self.insecticide = "Low"
+        self.location = "Forest"
+        self.seeds = 8
