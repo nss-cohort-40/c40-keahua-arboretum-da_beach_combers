@@ -7,12 +7,7 @@ from .flying import Flying
 # from .high_elevation import HighElevation
 # from .light_rainfall import LightRainfall
 # from .no_shade import NoShade
-<<<<<<< HEAD
 # from .shady import Shady
 from .stagnant import Stagnant
-=======
-from .shady import Shady
-# from .stagnant import Stagnant
->>>>>>> master
 from .swimming import Swimming
 from .walking import Walking
