@@ -15,10 +15,15 @@ def cultivate(arboretum):
         pass
 
 
-    for index, plant in enumerate(arboretum.pl):
+    for index, river in enumerate(arboretum.rivers):
         print(f'{index + 1}. River {river.id}')
 
+    for river in arboretum.rivers:
+        for index, animal in enumerate(river.animals):
+          if animal.species == "River dolphin":
+          print(f'{index + 1}. River Dolphin {animal.id}')
+          
     print("Cultivate the plant into which biome?")
     choice = input("> ")
 
-    arboretum.plants[int(choice) - 1].plants.append(plant)
+    arboretum.rivers[int(choice) - 1].plants.append(plant)

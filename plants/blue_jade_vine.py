@@ -1,12 +1,8 @@
 from plants import Plant
 
 class Blue_Jade_Vine(Plant):
-    def __init__(self, name, location, species, sunlight, seeds, insecticide):
-        super().__init__(name, species, sunlight, seeds, insecticide)
-        self.species = species
-        self.sunlight = sunlight
-        self.seeds = seeds
-        self.insecticide = insecticide
-    def add_plant(self, plant):
-        self.plants.append(plant)
-    def remove_plant(self, plant):
+    def __init__(self):
+        Plant.__init__(self,'Blue Jade Vine')
+    # def add_plant(self, plant):
+    #     self.plants.append(plant)
+    # def remove_plant(self, plant):
