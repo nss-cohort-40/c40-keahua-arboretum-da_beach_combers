@@ -1,7 +1,7 @@
 from uuid import uuid1
 
 
-class Identifiable:
+class Identifiable():
 
     def __init__(self):
-      self.id = uuid1()
+        self.id = uuid1()
