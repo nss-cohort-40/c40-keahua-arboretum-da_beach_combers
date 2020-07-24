@@ -2,11 +2,11 @@ from .plant import Plant
 from characteristics import Shady 
 from characteristics import Identifiable
 
-class Blue_Jade_Vine(Plant, Shady, Identifiable):
+class Mountain_Apple_Tree(Plant, Shady, Identifiable):
 
     def __init__(self):
-        Plant.__init__(self, "Blue Jade Vine")
+        Plant.__init__(self, "Mountain Apple Tree")
         Shady.__init__(self)
         Identifiable.__init__(self)
-        self.insecticide_resistance = "Low"
-        self.seeds = 0
+        self.insecticide_resistance = "High"
+        self.seeds = 17
