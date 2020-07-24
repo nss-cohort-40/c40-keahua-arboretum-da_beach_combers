@@ -8,8 +8,8 @@ class GoldDustDayGecko(Animal):
 
     def __init__(self):
         Animal.__init__(self, "Gold Dust Day Gecko")
-        # Walking.__init__(self)
-        # Identifiable.__init__(self)
+        Walking.__init__(self)
+        Identifiable.__init__(self)
         self.__prey = {"Silkworms", "Hornworms", "Crickets", "Roaches"}
 
     @property
