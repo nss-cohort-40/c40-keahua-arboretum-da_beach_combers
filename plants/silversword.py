@@ -1,17 +1,12 @@
+from .plant import Plant
+from characteristics import Shady 
 
-class Silversword(Plant):
+class silversword(Plant, Shady):
 
-    def __init__(self, name, location, species, sunlight, seeds, insecticide):
-        super().__init__(name, species, sunlight, seeds, insecticide)
-        self.species = species
-        self.sunlight = sunlight
-        self.seeds = seeds
-        self.insecticide = insecticide
+    def __init__(self):
+        Plant.__init__(self, "silversword")
+        Shady.__init__(self)
 
+    @property 
     def plant(self):
-        print(f'Plant in {environment}')
-     
-    def add_plant(self, plant):
-        self.plants.append(plant)
-
-    def remove_plant(self, plant):
+        return self.__plant

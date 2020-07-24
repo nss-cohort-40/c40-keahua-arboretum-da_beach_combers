@@ -1,14 +1,12 @@
-class Mountain_Apple_Tree(Plant):
+from .plant import Plant
+from characteristics import Shady 
 
-    def __init__(self, name, location, species, sunlight, seeds, insecticide):
-        super().__init__(name, species, sunlight, seeds, insecticide)
-        self.species = species
-        self.sunlight = sunlight
-        self.seeds = seeds
-        self.insecticide = insecticide
+class Mountain_Apple_Tree(Plant, Shady):
 
+    def __init__(self):
+        Plant.__init__(self, "Mountain Apple Tree")
+        Shady.__init__(self)
 
-    def add_plant(self, plant):
-        self.plants.append(plant)
-
-    def remove_plant(self, plant):
+    @property 
+    def plant(self):
+        return self.__plant

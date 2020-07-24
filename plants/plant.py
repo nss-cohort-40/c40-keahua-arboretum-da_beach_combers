@@ -1,14 +1,20 @@
+from .environment import Environment
+
 class Plant:
 
-    def __init__(self, sunlight, seeds, insecticide):
+    def __init__(self, species,  sunlight, seeds, insecticide):
+      self.species = species
       self.sunlight = sunlight
       self.seeds = seeds
       self.insecticide = insecticide
 
-    def add_plant(self, plant):
-        self.plants.append(plant)
-
-    def remove_plant(self, plant):
+    def plant(self, plant):
+        try:
+            if environment.capacity > -1:
+                self.plants.append(plant)
+                print(f"{plant}  cultivated in {self.location}")
+        except AttributeError as ex:
+            print(f'{plant} could not be added due to lack  of capacity at {self.name}.')
 
 
 
