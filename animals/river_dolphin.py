@@ -26,6 +26,7 @@ class RiverDolphin(Animal, Identifiable, Freshwater, Saltwater, Swimming, Aquati
             print(f'The dolphin ate {prey} for a meal')
         else:
             print(f'The dolphin rejects the {prey}')
+        input("\n\nPress any key to continue...")
 
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'

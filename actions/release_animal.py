@@ -1,3 +1,4 @@
+import os
 from animals import GoldDustDayGecko
 from animals import NeneGoose
 from animals import Kikakapu
@@ -9,6 +10,8 @@ from animals import Ulae
 
 
 def release_animal(arboretum):
+    os.system('cls' if os.name == 'nt' else 'clear')
+
     animal = None
 
     print("1. Gold Dust Day Gecko")
