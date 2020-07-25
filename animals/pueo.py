@@ -11,7 +11,7 @@ class Pueo(Animal, Terrestrial, Flying, Identifiable):
         Terrestrial.__init__(self)
         Flying.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = {"mice", "insects"}
+        self.__prey = ["mice", "insects"]
 
     @property
     def prey(self):
@@ -22,6 +22,7 @@ class Pueo(Animal, Terrestrial, Flying, Identifiable):
             print(f'The Pueo ate {prey} for a meal')
         else:
             print(f'The Pueo rejects the {prey}')
+        input("\n\nPress enter to continue...")
 
     def __str__(self):
         return f'Pueo {self.id}. Screeecchh'

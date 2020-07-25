@@ -11,7 +11,7 @@ class Ulae(Animal, Aquatic, Swimming, Identifiable):
         Aquatic.__init__(self)
         Swimming.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = {"reef invertebrate", "Water Bugs"}
+        self.__prey = ["reef invertebrate", "Water Bugs"]
 
     @property
     def prey(self):
@@ -22,6 +22,7 @@ class Ulae(Animal, Aquatic, Swimming, Identifiable):
             print(f'The Ulae ate {prey} for a meal')
         else:
             print(f'The Ulae rejects the {prey}')
+        input("\n\nPress enter to continue...")
 
     def __str__(self):
         return f'Ulae {self.id}. blub blub blub....!'

@@ -27,27 +27,35 @@ def release_animal(arboretum):
 
     if choice == "1":
         animal = GoldDustDayGecko()
+        arboretum.gold_dust_day_gecko.append(animal)
 
     if choice == "2":
         animal = NeneGoose()
+        arboretum.nene_goose.append(animal)
 
     if choice == "3":
         animal = Kikakapu()
+        arboretum.kikakapu.append(animal)
 
     if choice == "4":
         animal = Opeapea()
+        arboretum.opeapea.append(animal)
 
     if choice == "5":
         animal = Pueo()
+        arboretum.pueo.append(animal)
 
     if choice == "6":
         animal = RiverDolphin()
+        arboretum.river_dolphins.append(animal)
 
     if choice == "7":
         animal = HappyFaceSpider()
+        arboretum.happy_face_spider.append(animal)
 
     if choice == "8":
         animal = Ulae()
+        arboretum.ulae.append(animal)
 
     for index, river in enumerate(arboretum.rivers):
         print(f'{index + 1}. River {river.id}')
@@ -56,4 +64,4 @@ def release_animal(arboretum):
     choice = input("> ")
 
     arboretum.rivers[int(choice) - 1].animals.append(animal)
-    arboretum.river_dolphins.append(animal)
+
