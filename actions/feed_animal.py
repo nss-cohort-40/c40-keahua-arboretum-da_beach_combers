@@ -33,31 +33,17 @@ def feed_animal(arboretum):
 
     if choice == "6":
 
-        for river in arboretum.rivers:
-          for index, animal in enumerate(river.animals):
-            if animal.species == "River dolphin":
-              print(f'{index + 1}. River Dolphin {animal.id}')
+          for index, rDolph in enumerate(arboretum.river_dolphins):
+              print(f'{index + 1}. River Dolphin {rDolph.id}')
           choice = input("> ")
           os.system('cls' if os.name == 'nt' else 'clear')
           print(f"What is on the menu for the River Dolphin today?")
-          for index, prey in enumerate(animal.prey):
+          for index, prey in enumerate(rDolph.prey):
             print(f'{index + 1}. {prey}')
-          choice = input("Choose your prey? > ")
-          # animal.feed(choice)
-
-          if choice == "1":
-            prey = "Salmon"
-            animal.feed(prey)
-          
-          # if choice = "2":
-          #   prey = "Sardine"
-          #   animal.feed(prey)
-          # if choice = "3":
-          #   prey = "Trout"
-          #   animal.feed(prey)
-          # if choice = "4":
-          #   prey = "Mackarel"
-          #   animal.feed(prey)
+          choice = input("> ")
+          prey = rDolph.prey[int(choice) - 1] 
+          print(rDolph.feed(prey))
+          input("\n\nPress enter to continue...")
 
     if choice == "7":
       pass

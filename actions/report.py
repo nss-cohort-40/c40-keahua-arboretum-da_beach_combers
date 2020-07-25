@@ -8,4 +8,6 @@ def build_facility_report(arboretum):
         for plant in river.plants:
             print(f'   {plant.species} [{plant.id}]')
 
+    for river_dolphins in arboretum.river_dolphins:
+        print(f'RiverDolphin [{river_dolphins.id}]')
     input("\n\nPress any key to continue...")
