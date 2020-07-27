@@ -4,13 +4,12 @@ from characteristics import Swimming
 from characteristics import Identifiable
 
 
-class Ulae(Animal, Aquatic, Swimming, Identifiable):
+class Ulae(Animal, Aquatic, Swimming):
 
     def __init__(self):
         Animal.__init__(self, "Ulae")
         Aquatic.__init__(self)
         Swimming.__init__(self)
-        Identifiable.__init__(self)
         self.__prey = ["reef invertebrate", "Water Bugs"]
 
     @property
