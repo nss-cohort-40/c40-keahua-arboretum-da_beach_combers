@@ -3,13 +3,8 @@ class Arboretum:
         self.name = name
         self.address = address
         self.rivers = []
+        self.coastlines = []
+        self.forests = []
         self.grasslands = []
-        self.river_dolphins = []
-        self.happy_face_spider = []
-        self.ulae = []
-        self.gold_dust_day_gecko = []
-        self.nene_goose = []
-        self.kikakapu = []
-        self.opeapea = []
-        self.pueo = []
-        self.ulae = []
+        self.mountains = []
+        self.swamps = []
