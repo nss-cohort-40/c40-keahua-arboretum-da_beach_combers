@@ -1,4 +1,12 @@
-from animals import *
+import os
+from animals import GoldDustDayGecko
+from animals import NeneGoose
+from animals import Kikakapu
+from animals import Opeapea
+from animals import Pueo
+from animals import RiverDolphin
+from animals import HappyFaceSpider
+from animals import Ulae
 
 def choose_environment(arboretum, animal):
     environments = []
@@ -23,6 +31,7 @@ def choose_environment(arboretum, animal):
         choose_biome(arboretum, animal)
 
 def release_animal(arboretum):
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     animal = None
 
@@ -37,30 +46,42 @@ def release_animal(arboretum):
     
     choice = input("Choose animal to release > ")
 
-    try:
-        if choice == "1":
-            animal = GoldDustDayGecko()
+    if choice == "1":
+        animal = GoldDustDayGecko()
+        arboretum.gold_dust_day_gecko.append(animal)
 
-        if choice == "2":
-            animal = RiverDolphin()
+    if choice == "2":
+        animal = NeneGoose()
+        arboretum.nene_goose.append(animal)
 
-        if choice == "3":
-            animal = NeneGoose()
+    if choice == "3":
+        animal = Kikakapu()
+        arboretum.kikakapu.append(animal)
 
-        if choice == "4":
-            animal = Kikakapu()
+    if choice == "4":
+        animal = Opeapea()
+        arboretum.opeapea.append(animal)
 
-        if choice == "5":
-            animal = Ulae()
+    if choice == "5":
+        animal = Pueo()
+        arboretum.pueo.append(animal)
 
-        if choice == "6":
-            animal = Opeapea()
+    if choice == "6":
+        animal = RiverDolphin()
+        arboretum.river_dolphins.append(animal)
+
+    if choice == "7":
+        animal = HappyFaceSpider()
+        arboretum.happy_face_spider.append(animal)
+
+    if choice == "8":
+        animal = Ulae()
+        arboretum.ulae.append(animal)
 
         if choice == "8":
             animal = HappyFaceSpider()
 
         choose_environment(arboretum, animal)
 
-    except AttributeError:
-        print("error")
-        release_animal(arboretum)
+    arboretum.rivers[int(choice) - 1].animals.append(animal)
+

@@ -8,6 +8,7 @@ from characteristics import *
 from arboretum import Arboretum
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
+from actions.feed_animal import feed_animal
 from actions.report import build_facility_report
 from actions.cultivate import cultivate
 from actions.feed import feed_animal
