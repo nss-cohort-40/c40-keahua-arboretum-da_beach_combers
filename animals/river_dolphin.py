@@ -15,7 +15,7 @@ class RiverDolphin(Animal, Identifiable, Freshwater, Saltwater, Swimming, Aquati
         Swimming.__init__(self)
         Identifiable.__init__(self)
         Aquatic.__init__(self)
-        self.__prey = {"Trout", "Mackarel", "Salmon", "Sardine"}
+        self.__prey = ["Trout", "Mackarel", "Salmon", "Sardine"]
 
     @property
     def prey(self):
@@ -26,6 +26,7 @@ class RiverDolphin(Animal, Identifiable, Freshwater, Saltwater, Swimming, Aquati
             print(f'The dolphin ate {prey} for a meal')
         else:
             print(f'The dolphin rejects the {prey}')
+        input("\n\nPress enter to continue...")
 
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'

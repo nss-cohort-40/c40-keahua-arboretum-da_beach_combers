@@ -11,7 +11,7 @@ class GoldDustDayGecko(Animal, Terrestrial, Walking, Identifiable):
         Terrestrial.__init__(self)
         Walking.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = {"Silkworms", "Hornworms", "Crickets", "Roaches"}
+        self.__prey = ["Silkworms", "Hornworms", "Crickets", "Roaches"]
 
     @property
     def prey(self):
@@ -22,6 +22,7 @@ class GoldDustDayGecko(Animal, Terrestrial, Walking, Identifiable):
             print(f'The gecko ate {prey} for a meal')
         else:
             print(f'The gecko rejects the {prey}')
+        input("\n\nPress enter to continue...")
 
     def __str__(self):
         return f'Gecko {self.id}. creeky noise via mouth....!'
