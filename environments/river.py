@@ -7,9 +7,9 @@ class River(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            # if animal.aquatic and animal.cell_type == "hypertonic":
                 try:
-                    if len(self.animals) < 12:
+                    # if len(self.animals) < 12:
                         self.animals.append(animal)
                 except ValueError:
                     print("Biome Full")

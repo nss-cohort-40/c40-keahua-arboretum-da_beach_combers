@@ -8,8 +8,11 @@ from animals import RiverDolphin
 from animals import HappyFaceSpider
 from animals import Ulae
 
-def choose_environment(arboretum, animal):
+def choose_environment(arboretum, animal, placement):
     environments = []
+    # if placement == "gecko":
+    #     environments.extend(arboretum.rivers)
+    #     environments.extend(arboretum.coastlines)
 
     environments.extend(arboretum.rivers)
     environments.extend(arboretum.swamps)
@@ -25,7 +28,7 @@ def choose_environment(arboretum, animal):
     choice = input(">")
 
     try:
-        arboretum.rivers[int(choice) - 1].animals.append(animal)
+            # arboretum.rivers[int(choice) - 1].animals.append(animal)
         environments[int(choice) - 1].add_animal(animal)
     except IndexError:
         print("Error")
@@ -35,6 +38,7 @@ def release_animal(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
 
     animal = None
+    placement = None
 
     print("1. Gold Dust Day Gecko")
     print("2. Nene Goose")
@@ -50,7 +54,7 @@ def release_animal(arboretum):
     if choice == "1":
         animal = GoldDustDayGecko()
         arboretum.gold_dust_day_gecko.append(animal)
-
+        placement = "gecko"
     if choice == "2":
         animal = NeneGoose()
         arboretum.nene_goose.append(animal)
@@ -70,6 +74,7 @@ def release_animal(arboretum):
     if choice == "6":
         animal = RiverDolphin()
         arboretum.river_dolphins.append(animal)
+        placement = "notrivers"
 
     if choice == "7":
         animal = HappyFaceSpider()
@@ -79,7 +84,7 @@ def release_animal(arboretum):
         animal = Ulae()
         arboretum.ulae.append(animal)
 
-    choose_environment(arboretum, animal)
+    choose_environment(arboretum, animal, placement)
     # for index, river in enumerate(arboretum.rivers):
     #     print(f'{index + 1}. River {river.id}')
 
