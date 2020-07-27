@@ -1,7 +1,17 @@
 # import os
 
+
 def build_facility_report(arboretum):
     # os.system('cls' if os.name == 'nt' else 'clear')
+    environments = []
+    environments.extend(arboretum.rivers)
+    environments.extend(arboretum.swamps)
+    environments.extend(arboretum.coastlines)
+    environments.extend(arboretum.grasslands)
+    environments.extend(arboretum.mountains)
+    environments.extend(arboretum.forests)
+    for index, environment in enumerate(environments):
+            print(f'{index + 1}. {environment.name} {str(environment.id)} has {len(environment.animals)} animals')
 
     for river in arboretum.rivers:
         print(f'River [{river.id}]')
@@ -45,4 +55,4 @@ def build_facility_report(arboretum):
         for plant in swamp.plants:
             print(f'      {plants.species} [{plant.id}]')
 
-    input("\n\nPress any key to continue...")
+input("\n\nPress any key to continue...")
