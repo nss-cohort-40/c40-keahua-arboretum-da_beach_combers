@@ -4,13 +4,12 @@ from characteristics import Walking
 from characteristics import Identifiable
 
 
-class HappyFaceSpider(Animal, Terrestrial, Walking, Identifiable):
+class HappyFaceSpider(Animal, Terrestrial, Walking):
 
     def __init__(self):
         Animal.__init__(self, "Happy Face Spider")
         Terrestrial.__init__(self)
         Walking.__init__(self)
-        Identifiable.__init__(self)
         self.__prey = ["grasshopper", "fruit flies"]
 
     @property
