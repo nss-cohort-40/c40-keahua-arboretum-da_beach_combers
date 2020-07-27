@@ -25,6 +25,7 @@ def choose_environment(arboretum, animal):
     choice = input(">")
 
     try:
+        arboretum.rivers[int(choice) - 1].animals.append(animal)
         environments[int(choice) - 1].add_animal(animal)
     except IndexError:
         print("Error")
@@ -79,5 +80,11 @@ def release_animal(arboretum):
         arboretum.ulae.append(animal)
 
     choose_environment(arboretum, animal)
-    arboretum.rivers[int(choice) - 1].animals.append(animal)
+    # for index, river in enumerate(arboretum.rivers):
+    #     print(f'{index + 1}. River {river.id}')
+
+    # print("Release the animal into which biome?")
+    # choice = input("> ")
+
+    # arboretum.rivers[int(choice) - 1].animals.append(animal)
 
