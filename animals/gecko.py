@@ -4,13 +4,12 @@ from characteristics import Walking
 from characteristics import Identifiable
 
 
-class GoldDustDayGecko(Animal, Terrestrial, Walking, Identifiable):
+class GoldDustDayGecko(Animal, Terrestrial, Walking):
 
     def __init__(self):
         Animal.__init__(self, "Gold Dust Day Gecko")
         Terrestrial.__init__(self)
         Walking.__init__(self)
-        Identifiable.__init__(self)
         self.__prey = ["Silkworms", "Hornworms", "Crickets", "Roaches"]
 
     @property
