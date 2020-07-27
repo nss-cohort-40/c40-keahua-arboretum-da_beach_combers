@@ -1,1 +1,1 @@
-from .feed import feed_animal
+from .feed_animal import feed_animal
