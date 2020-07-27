@@ -78,10 +78,10 @@ def release_animal(arboretum):
         animal = Ulae()
         arboretum.ulae.append(animal)
 
-        if choice == "8":
-            animal = HappyFaceSpider()
+    if choice == "8":
+        animal = HappyFaceSpider()
 
-        choose_environment(arboretum, animal)
+    choose_environment(arboretum, animal)
 
     arboretum.rivers[int(choice) - 1].animals.append(animal)
 

@@ -17,7 +17,9 @@ def choose_environment(arboretum, plant):
     choice = input(">>")
 
     try:
-        environment[int(choice) - 1].cul
+        environment[int(choice) - 1].cultivate(plant.species)
+    except:
+        print(f'error')
 
 def cultivate(arboretum):
     plant = None
