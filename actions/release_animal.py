@@ -36,13 +36,13 @@ def release_animal(arboretum):
     animal = None
 
     print("1. Gold Dust Day Gecko")
-    print("2. River Dolphin")
-    print("3. Nene Goose")
-    print("4. Kīkākapu")
+    print("2. Nene Goose")
+    print("3. Kīkākapu")
+    print("4. Ope'ape'a")
     print("5. Pueo")
-    print("6. 'Ulae")
-    print("7. Ope'ape'a")
-    print("8. Happy-Face Spider")
+    print("6. River dolphin")
+    print("7. Happy Face Spider")
+    print("8. Ulae")
     
     choice = input("Choose animal to release > ")
 
