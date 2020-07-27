@@ -14,29 +14,52 @@ def feed_animal(arboretum):
 
     choice = input("Choose animal to feed. > ")
 
-    def food_list(animal):
-        print(animal)
-        i = 1
-        for snack in animal.prey:
-             print(f'{i}. {snack}')
-             i+=1
+    selected_animal_list = []
+
+    environments = [arboretum.coastlines, arboretum.forests, arboretum.grasslands, arboretum.mountains, arboretum.rivers, arboretum.swamps]
+
+    def animal_list(selected_animal):
+      for environment in environments:
+        for habitat in environment:
+          for animal in habitat.animals:
+            if isinstance(animal, selected_animal):
+              selected_animal_list.append(animal)
+      
+
 
     if choice == "1":
-      pass
+      animal_list(GoldDustDayGecko)
+
     if choice == "2":
-      pass
+      animal_list(NeneGoose)
+
     if choice == "3":
-      pass
+      animal_list(Kikakapu)
+
     if choice == "4":
-      pass
+      animal_list(Opeapea)
+
     if choice == "5":
-      pass
+      animal_list(Pueo)
+
     if choice == "6":
-      food_list(RiverDolphin)
+      animal_list(RiverDolphin)
 
     if choice == "7":
-      pass
+      animal_list(HappyFaceSpider)
     
     if choice == "8":
-      pass
-    
+      animal_list(Ulae)
+
+    for index, animal in enumerate(selected_animal_list):
+      print(f'{index + 1}. {animal}')
+    print(f'Choose an animal:')
+    choice = input(">> ")
+    chosen = selected_animal_list[int(choice) -1]
+    foods = list(chosen.prey)
+
+    for index, food in enumerate(foods):
+      print(f'{index +1}. {food}')
+    picked_food = input('>> ')
+    animal.feed(foods[int(picked_food) -1])
+    input('Press enter to return to main menu\n')

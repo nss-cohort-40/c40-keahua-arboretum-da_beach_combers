@@ -1,5 +1,24 @@
 from plants import Blue_Jade_Vine
 
+def choose_environment(arboretum, plant):
+    environments = []
+
+    environments.extend(arboretum.rivers)
+    environments.extend(arboretum.swamps)
+    environments.extend(arboretum.coastlines)
+    environments.extend(arboretum.grasslands)
+    environments.extend(arboretum.mountains)
+    environments.extend(arboretum.forests)
+
+    for index, environment in enumerate(environments):
+        print(f'{index + 1}. {environment.name} {str(environment.id)} has {len(environment.plants)} plants')
+
+    print(f'Cultivate {plant.species.lower()} into which biome?')
+    choice = input(">>")
+
+    try:
+        environment[int(choice) - 1].cul
+
 def cultivate(arboretum):
     plant = None
 
