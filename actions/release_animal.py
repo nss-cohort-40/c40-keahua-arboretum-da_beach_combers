@@ -39,7 +39,7 @@ def choose_environment(arboretum, animal, placement):
         environments.extend(arboretum.coastlines)
    
     for index, environment in enumerate(environments):
-        print(f'{index + 1}. {environment.name} {[str(environment.id)[:8]]} has {len(environment.animals)} animals')
+        print(f'{index + 1}. {environment.name} [{str(environment.id)[:8]}] has {len(environment.animals)} animals')
 
     print(f"Release {animal.species.lower()} into which biome?")
     choice = input(">")
