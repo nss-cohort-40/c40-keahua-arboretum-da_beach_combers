@@ -1,5 +1,5 @@
-# from animals import Aquatic
 from .environment import Environment
+from characteristics.shady import Shady
 
 
 class Grassland(Environment):
@@ -14,9 +14,9 @@ class Grassland(Environment):
     #     except AttributeError:
     #         raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
 
-    # def add_plant(self, plant):
-    #     try:
-    #         if plant.freshwater and plant.requires_current:
-    #             self.plants.append(plant)
-    #     except AttributeError:
-    #         raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+    def add_plant(self, plant):
+        try:
+            if plant.shady and plant.requires_current:
+                self.plants.append(plant)
+        except AttributeError:
+            raise AttributeError("Can only add plants that require shade to the grassland biome")
