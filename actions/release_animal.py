@@ -57,8 +57,8 @@ def release_animal(arboretum):
         animal = Ulae()
         arboretum.ulae.append(animal)
 
-    for index, river in enumerate(arboretum.rivers):
-        print(f'{index + 1}. River {river.id}')
+    # for index, river in enumerate(arboretum.rivers):
+    #     print(f'{index + 1}. River {river.id}')
 
     print("Release the animal into which biome?")
     choice = input("> ")
