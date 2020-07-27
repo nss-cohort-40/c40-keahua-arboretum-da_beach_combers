@@ -21,5 +21,12 @@ class Swamp(Environment):
             raise TypeError(f"{item} is not of type IStagnant")
         self.inhabitants.append(item)
 
+    def add_plant(self, plant):
+        try:
+            # if plant.freshwater and plant.requires_current:
+                self.plants.append(plant)
+        except AttributeError:
+            raise AttributeError("Must be swampy plants!!")
+
     def __str__(self):
         return self.name

@@ -18,7 +18,7 @@ class River(Environment):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            # if plant.freshwater and plant.requires_current:
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
