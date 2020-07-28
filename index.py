@@ -26,6 +26,42 @@ def build_menu():
     print("6. Exit")
 
 
+def build_2ndmenu():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("1. Annex Habitat")
+    print("5. Display Facility Report")
+    print("6. Exit")
+
+
+def second_menu():
+    """Show Keahua Action Options
+
+    Arguments: None
+    """
+    build_2ndmenu()
+    choice = input(">> ")
+
+    if choice == "1":
+        annex_habitat(keahua)
+        main_menu()
+
+    if choice == "2":
+        release_animal(keahua)
+
+    if choice == "3":
+        feed_animal(keahua)
+
+    if choice == "4":
+        cultivate(keahua)
+
+    if choice == "5":
+        build_facility_report(keahua)
+        pass
+
+    if choice != "6":
+        second_menu()
+
+
 def main_menu():
     """Show Keahua Action Options
 
@@ -50,8 +86,11 @@ def main_menu():
         build_facility_report(keahua)
         pass
 
-    if choice != "6":
-        main_menu()
+    if choice == "6":
+        exit()
 
 
-main_menu()
+second_menu()
+
+
+# main_menu()

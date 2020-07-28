@@ -1,3 +1,4 @@
+import time
 from .environment import Environment
 
 
@@ -5,16 +6,14 @@ class River(Environment):
 
     def __init__(self, name):
         super().__init__(name)
-        self.animal_capacity = 1
-        self.plant_capacity = 1
+        self.animal_capacity = 12
+        # self.plant_capacity = 1
 
     def add_animal(self, animal):
-        try:
-            if len(self.animals) < 1:
-                self.animals.append(animal)
-                print(f' {animal.species} lives here!')
-        except ValueError:
-            # raise ValueError("Biome Full")
-            print(f' {animal.species} cant go here')
+        if len(self.animals) < 11:
+            self.animals.append(animal)
+            print(f"{animal.species} lives in the River now")
+        else:
+            print(f'Sorry {animal.species}, we are full!')
 
-        input("\n\nPress any key to continue...")
+        time.sleep(2)

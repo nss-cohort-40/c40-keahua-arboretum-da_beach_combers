@@ -1,3 +1,4 @@
+import time
 from .environment import Environment
 import sys
 sys.path.append('../')
@@ -17,15 +18,18 @@ class Swamp(Environment):
         return "This place has a bunch of animals in it"
 
     def add_animal(self, animal):
-        try:
-            # if animal.aquatic and animal.cell_type == "hypertonic":
-                self.animals.append(animal)
-        except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
+        if len(self.animals) < 8:
+            self.animals.append(animal)
+            print(f"{animal.species} lives in the Swamp now")
+        else:
+            print(f'Sorry {animal.species}, we are full!')
+
+        time.sleep(2)
+
     def add_plant(self, plant):
         try:
             # if plant.freshwater and plant.requires_current:
-                self.plants.append(plant)
+            self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Must be swampy plants!!")
 
