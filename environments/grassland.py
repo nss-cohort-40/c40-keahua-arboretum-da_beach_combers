@@ -7,6 +7,7 @@ class Grassland(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.animal_capacity = 12
 
     def add_animal(self, animal):
         if len(self.animals) < 21:

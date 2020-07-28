@@ -11,6 +11,7 @@ class Swamp(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.animal_capacity = 12
         # self.name = name
         # self.inhabitants = []
 

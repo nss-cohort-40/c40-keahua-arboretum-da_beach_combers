@@ -47,12 +47,15 @@ def second_menu():
 
     if choice == "2":
         release_animal(keahua)
+        main_menu()
 
     if choice == "3":
         feed_animal(keahua)
+        main_menu()
 
     if choice == "4":
         cultivate(keahua)
+        main_menu()
 
     if choice == "5":
         build_facility_report(keahua)
