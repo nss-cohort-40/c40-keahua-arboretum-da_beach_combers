@@ -7,15 +7,14 @@ class Forest(Environment):
 
     def __init__(self, name):
         super().__init__(name)
-        self.animal_capacity = 1
-        self.plant_capacity = 1
+        self.animal_capacity = 20
 
     def add_animal(self, animal):
-        try:
-            # if animal.aquatic and animal.cell_type == "hypertonic":
-                self.animals.append(animal)
-        except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
+        if len(self.animals) < 19:
+            self.animals.append(animal)
+            print(f"{animal.species} lives in the Forest now")
+        else:
+            print(f'Sorry {animal.species}, we are full!')
 
     def add_plant(self, plant):
         if len(self.plants) < 1:
