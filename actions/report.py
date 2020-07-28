@@ -10,15 +10,22 @@ def build_facility_report(arboretum):
     environments.extend(arboretum.grasslands)
     environments.extend(arboretum.mountains)
     environments.extend(arboretum.forests)
+
+
     for index, environment in enumerate(environments):
             print(f'{index + 1}. {environment.name} {str(environment.id)} has {len(environment.animals)} animals')
 
     for river in arboretum.rivers:
         print(f'River [{river.id}]')
         for animal in river.animals:
-            print(f'      {animal.species} [{animal.id}]')
+            if ({animal.species} in range(0,11)):
+                if animal <= 11:
+                    print(f'      {animal.species} [{animal.id}]')
+            else: 
+                    print(f'River [{river.id}] is at capacity')
         for plant in river.plants:
             print(f'      {plant.species} [{plant.id}]')
+
 
     for coastline in arboretum.coastlines:
         print(f'Coastline [{coastline.id}]')
