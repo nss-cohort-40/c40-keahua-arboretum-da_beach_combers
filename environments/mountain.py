@@ -8,9 +8,10 @@ class Mountain(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.animal_capacity = 6
+        self.plant_capacity = 4
 
     def add_animal(self, animal):
-        if len(self.animals) < 5:
+        if len(self.animals) < 1:
             self.animals.append(animal)
             print(f"{animal.species} lives on the Mountain now")
         else:
@@ -19,9 +20,9 @@ class Mountain(Environment):
         time.sleep(2)
 
     def add_plant(self, plant):
-        try:
-            # if plant.freshwater and plant.requires_current:
+        if len(self.plants) < 1:
             self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError(
-                "Cannot add plants that require brackish water or stagnant water to a river biome")
+            print(f"{plant.species} lives in th River now")
+        else:
+            print(f'Sorry {plant.species}, we are full!')
+        time.sleep(3)

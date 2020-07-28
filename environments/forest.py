@@ -8,6 +8,7 @@ class Forest(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.animal_capacity = 20
+        self.plant_capacity = 32
 
     def add_animal(self, animal):
         if len(self.animals) < 19:
@@ -16,4 +17,11 @@ class Forest(Environment):
         else:
             print(f'Sorry {animal.species}, we are full!')
 
-        time.sleep(2)
+    def add_plant(self, plant):
+        if len(self.plants) < 32:
+            self.plants.append(plant)
+            print(f"{plant.species} lives in th River now")
+        else:
+            print(f'Sorry {plant.species}, we are full!')
+        time.sleep(3)
+        
