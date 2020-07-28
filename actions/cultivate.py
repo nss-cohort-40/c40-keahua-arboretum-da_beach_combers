@@ -1,30 +1,39 @@
 from plants import *
 
-
-def choose_environment(arboretum, plant):
+def choose_environment(arboretum, plant, placement):
     environments = []
-
-    environments.extend(arboretum.rivers)
-    environments.extend(arboretum.swamps)
-    environments.extend(arboretum.coastlines)
-    environments.extend(arboretum.grasslands)
-    environments.extend(arboretum.mountains)
-    environments.extend(arboretum.forests)
+    if placement == "blue_jade_vine":
+        environments.extend(arboretum.grasslands)
+        environments.extend(arboretum.swamps)
+    
+    if placement == "mountain_apple_tree":
+        environments.extend(arboretum.mountains)
+    
+    if placement == "rainbow_eucalyptus_tree":
+        environments.extend(arboretum.forests)
+    
+    if placement == "silversword":
+        environments.extend(arboretum.grasslands)
+    
 
     for index, environment in enumerate(environments):
-        print(f'{index + 1}. {environment.name} {str(environment.id)} has {len(environment.plants)} plants')
+        print(f'{index + 1}. {environment.name} [{str(environment.id)[:8]}] has {len(environment.plants)} plants')
+    if len(environments) == 0:
+        print('There is no Biome available for this plant!')
+        input('Press enter to continue')
+    else:
+        print(f'Cultivate {plant.species.lower()} into which biome?')
+        choice = input(">>")
 
-    print(f'Cultivate {plant.species.lower()} into which biome?')
-    choice = input(">>")
-
-    try:
-        environments[int(choice) - 1].add_plant(plant)
-    except:
-        print(f'error')
-        choose_environment(arboretum, plant)
+        try:
+            environments[int(choice) - 1].add_plant(plant)
+        except:
+            print(f'error')
+            choose_environment(arboretum, plant)
 
 def cultivate(arboretum):
     plant = None
+    placement = None
 
     print("1. Blue Jade Vine")
     print("2. Mountain Apple Tree")
@@ -35,14 +44,15 @@ def cultivate(arboretum):
 
     if choice == "1":
         plant = Blue_Jade_Vine()
-        
+        placement = "blue_jade_vine"
     if choice == "2":
         plant = Mountain_Apple_Tree()
-        
+        placement = "mountain_apple_tree"
     if choice == "3":
         plant = Rainbow_Eucalyptus_Tree()
-        
+        placement = "rainbow_eucalyptus_tree"
     if choice == "4":
         plant = silversword()
+        placement = "silversword"
 
-    choose_environment(arboretum, plant)
+    choose_environment(arboretum, plant, placement)
