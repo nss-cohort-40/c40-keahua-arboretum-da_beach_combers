@@ -9,12 +9,15 @@ class River(Environment):
         self.plant_capacity = 1
 
     def add_animal(self, animal):
-        if len(self.animals) < 1:
-            self.animals.append(animal)
-            print(f"{animal.species} lives in th River now")
-        else:
-            print(f'Sorry {animal.species}, we are full!')
-        time.sleep(2)
+          
+        try:
+            if len(self.animals) < 1:
+                self.animals.append(animal)
+        except ValueError:
+                print("Biome Full")
+                input('>> please hit enter')
+        except AttributeError:
+            print("Only Freshwater aquatic animals allowed")
 
     def add_plant(self, plant):
         if len(self.plants) < 1:
