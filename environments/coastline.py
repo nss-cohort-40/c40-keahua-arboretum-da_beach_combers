@@ -9,7 +9,7 @@ class Coastline(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            # if animal.aquatic and animal.cell_type == "hypertonic":
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
