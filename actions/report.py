@@ -11,7 +11,7 @@ def build_facility_report(arboretum):
             print(f'      {plant.species} [{plant.id}]')
 
     for coastline in arboretum.coastlines:
-        print(f'Coastline [{coastline.id}]')
+        print(f'Coastline [{coastline.id}] has {len(coastline.animals)} animals')
         for animal in coastline.animals:
             print(f'      {animal.species} [{animal.id}]')
         for plant in coastline.plants:
