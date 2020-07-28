@@ -10,6 +10,7 @@ from animals import Ulae
 
 def choose_environment(arboretum, animal, placement):
     environments = []
+
     if placement == "gecko":
         environments.extend(arboretum.forests)
 
@@ -41,14 +42,20 @@ def choose_environment(arboretum, animal, placement):
     for index, environment in enumerate(environments):
         print(f'{index + 1}. {environment.name} [{str(environment.id)[:8]}] has {len(environment.animals)} animals')
 
-    print(f"Release {animal.species.lower()} into which biome?")
-    choice = input(">")
+    if len(environments) == 0:
+        print('There is no biome for this animal')
+        input("\n\nPress enter to return to menu...")
 
-    try:
-        environments[int(choice) - 1].add_animal(animal)
-    except IndexError:
-        print("Error")
-        choose_environment(arboretum, animal, placement)
+    else:
+
+        print(f"Release {animal.species.lower()} into which biome?")
+        choice = input(">")
+
+        try:
+            environments[int(choice) - 1].add_animal(animal)
+        except IndexError:
+            print("Error")
+            choose_environment(arboretum, animal, placement)
 
 def release_animal(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
