@@ -8,11 +8,11 @@ class River(Environment):
     def add_animal(self, animal):
           
         try:
-            # if len(self.animals) < 1:
+            if len(self.animals) < 1:
                 self.animals.append(animal)
         except ValueError:
-            print("Biome Full")
-            input('>> please hit enter')
+                print("Biome Full")
+                input('>> please hit enter')
         except AttributeError:
             print("Only Freshwater aquatic animals allowed")
 
