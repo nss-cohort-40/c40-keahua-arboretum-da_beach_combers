@@ -22,7 +22,7 @@ class Coastline(Environment):
     def add_plant(self, plant):
         if len(self.plants) < 3:
             self.plants.append(plant)
-            print(f"{plant.species} lives in th River now")
+            print(f"{plant.species} lives in the Coastline now")
         else:
             print(f'Sorry {plant.species}, we are full!')
         time.sleep(3)

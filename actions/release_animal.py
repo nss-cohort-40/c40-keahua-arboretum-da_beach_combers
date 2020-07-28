@@ -8,6 +8,7 @@ from animals import RiverDolphin
 from animals import HappyFaceSpider
 from animals import Ulae
 
+
 def choose_environment(arboretum, animal, placement):
     environments = []
 
@@ -18,7 +19,7 @@ def choose_environment(arboretum, animal, placement):
         environments.extend(arboretum.grasslands)
 
     if placement == "kikakapu":
-        environments.extend(arboretum.rivers) 
+        environments.extend(arboretum.rivers)
         environments.extend(arboretum.swamps)
 
     if placement == "opeapea":
@@ -32,15 +33,16 @@ def choose_environment(arboretum, animal, placement):
     if placement == "river_dolphin":
         environments.extend(arboretum.rivers)
         environments.extend(arboretum.coastlines)
-    
+
     if placement == "spider":
         environments.extend(arboretum.swamps)
 
     if placement == "ulae":
         environments.extend(arboretum.coastlines)
-   
+
     for index, environment in enumerate(environments):
-        print(f'{index + 1}. {environment.name} [{str(environment.id)[:8]}] has {len(environment.animals)} animals')
+        print(
+            f'{index + 1}. {environment.name} [{str(environment.id)[:8]}] has {len(environment.animals)} animals')
 
     if len(environments) == 0:
         print('There is no biome for this animal')
@@ -57,6 +59,7 @@ def choose_environment(arboretum, animal, placement):
             print("Error")
             choose_environment(arboretum, animal, placement)
 
+
 def release_animal(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -68,10 +71,10 @@ def release_animal(arboretum):
     print("3. Kīkākapu")
     print("4. Ope'ape'a")
     print("5. Pueo")
-    print("6. River dolphin")
+    print("6. River Dolphin")
     print("7. Happy Face Spider")
     print("8. Ulae")
-    
+
     choice = input("Choose animal to release > ")
 
     if choice == "1":
@@ -115,5 +118,3 @@ def release_animal(arboretum):
         placement = "ulae"
 
     choose_environment(arboretum, animal, placement)
-   
-
