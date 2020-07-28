@@ -1,24 +1,20 @@
 from .environment import Environment
 
+
 class River(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.animal_capacity = 1
+        self.plant_capacity = 1
 
     def add_animal(self, animal):
         try:
-            # if animal.aquatic and animal.cell_type == "hypertonic":
-                try:
-                    # if len(self.animals) < 12:
-                        self.animals.append(animal)
-                except ValueError:
-                    print("Biome Full")
-        except AttributeError:
-            print("Only Freshwater aquatic animals allowed")
+            if len(self.animals) < 1:
+                self.animals.append(animal)
+                print(f' {animal.species} lives here!')
+        except ValueError:
+            # raise ValueError("Biome Full")
+            print(f' {animal.species} cant go here')
 
-    def add_plant(self, plant):
-        try:
-            # if plant.freshwater and plant.requires_current:
-                self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+        input("\n\nPress any key to continue...")
