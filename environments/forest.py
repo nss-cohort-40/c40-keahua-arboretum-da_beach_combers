@@ -1,11 +1,14 @@
 # from animals import Aquatic
 from .environment import Environment
+import time
 
 
 class Forest(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.animal_capacity = 1
+        self.plant_capacity = 1
 
     def add_animal(self, animal):
         try:
@@ -15,8 +18,10 @@ class Forest(Environment):
             raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
 
     def add_plant(self, plant):
-        try:
-            # if plant.freshwater and plant.requires_current:
-                self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+        if len(self.plants) < 1:
+            self.plants.append(plant)
+            print(f"{plant.species} lives in th River now")
+        else:
+            print(f'Sorry {plant.species}, we are full!')
+        time.sleep(3)
+        input("\n\nPress enter to return to menu...")
