@@ -40,7 +40,7 @@ def feed_animal(arboretum):
           else:
 
             for index, gecko in enumerate(arboretum.gold_dust_day_gecko):
-              print(f'{index + 1}. Gold Dust Day Gecko {gecko.id}')
+              print(f'{index + 1}. Gold Dust Day Gecko [{str(gecko.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Gold Dust Day Gecko today?")
@@ -58,7 +58,7 @@ def feed_animal(arboretum):
           else:
 
             for index, goose in enumerate(arboretum.nene_goose):
-              print(f'{index + 1}. Nene Goose {goose.id}')
+              print(f'{index + 1}. Nene Goose [{str(goose.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Nene Goose today?")
@@ -77,7 +77,7 @@ def feed_animal(arboretum):
           else:
 
             for index, kika in enumerate(arboretum.kikakapu):
-                print(f'{index + 1}. Kīkākapu {kika.id}')
+                print(f'{index + 1}. Kīkākapu [{str(kika.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Kīkākapu today?")
@@ -96,7 +96,7 @@ def feed_animal(arboretum):
           else:
               
             for index, ope in enumerate(arboretum.opeapea):
-                print(f'{index + 1}. Opeapea {ope.id}')
+                print(f'{index + 1}. Opeapea [{str(ope.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Opeapea today?")
@@ -134,7 +134,7 @@ def feed_animal(arboretum):
           else:
 
             for index, rDolph in enumerate(arboretum.river_dolphins):
-                print(f'{index + 1}. River Dolphin {rDolph.id}')
+                print(f'{index + 1}. River Dolphin [{str(rDolph.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the River Dolphin today?")
