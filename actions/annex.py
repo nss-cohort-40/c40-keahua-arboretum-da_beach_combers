@@ -10,7 +10,7 @@ from environments import Swamp
 def annex_habitat(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("1. River")
-    print("2. Costline")
+    print("2. Coastline")
     print("3. Forest")
     print("4. Grassland")
     print("5. Mountain")
