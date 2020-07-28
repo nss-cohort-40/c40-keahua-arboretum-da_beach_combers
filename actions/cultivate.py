@@ -18,15 +18,18 @@ def choose_environment(arboretum, plant, placement):
 
     for index, environment in enumerate(environments):
         print(f'{index + 1}. {environment.name} [{str(environment.id)[:8]}] has {len(environment.plants)} plants')
+    if len(environments) == 0:
+        print('There is no Biome available for this plant!')
+        input('Press enter to continue')
+    else:
+        print(f'Cultivate {plant.species.lower()} into which biome?')
+        choice = input(">>")
 
-    print(f'Cultivate {plant.species.lower()} into which biome?')
-    choice = input(">>")
-
-    try:
-        environments[int(choice) - 1].add_plant(plant)
-    except:
-        print(f'error')
-        choose_environment(arboretum, plant)
+        try:
+            environments[int(choice) - 1].add_plant(plant)
+        except:
+            print(f'error')
+            choose_environment(arboretum, plant)
 
 def cultivate(arboretum):
     plant = None
