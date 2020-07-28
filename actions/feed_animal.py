@@ -115,7 +115,7 @@ def feed_animal(arboretum):
           else:
               
             for index, pue in enumerate(arboretum.pueo):
-                print(f'{index + 1}. Pueo {pue.id}')
+                print(f'{index + 1}. Pueo [{str(pue.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Pueo today?")
@@ -153,7 +153,7 @@ def feed_animal(arboretum):
           else:
 
             for index, spider in enumerate(arboretum.happy_face_spider):
-                print(f'{index + 1}. Happy Face Spider {spider.id}')
+                print(f'{index + 1}. Happy Face Spider [{str(spider.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Happy Face Spider today?")
@@ -172,7 +172,7 @@ def feed_animal(arboretum):
           else:
 
             for index, ula in enumerate(arboretum.ulae):
-                print(f'{index + 1}. Ulae {ula.id}')
+                print(f'{index + 1}. Ulae [{str(ula.id)[:8]}]')
             choice = input("> ")
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"What is on the menu for the Ulae today?")
