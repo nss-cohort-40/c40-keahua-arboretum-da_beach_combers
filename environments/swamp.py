@@ -11,7 +11,7 @@ class Swamp(Environment):
 
     def __init__(self, name):
         super().__init__(name)
-        self.animal_capacity = 12
+        self.animal_capacity = 8
         # self.name = name
         # self.inhabitants = []
 
@@ -19,7 +19,7 @@ class Swamp(Environment):
         return "This place has a bunch of animals in it"
 
     def add_animal(self, animal):
-        if len(self.animals) < 8:
+        if len(self.animals) < 7:
             self.animals.append(animal)
             print(f"{animal.species} lives in the Swamp now")
         else:

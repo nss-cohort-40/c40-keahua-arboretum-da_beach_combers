@@ -10,7 +10,7 @@ class River(Environment):
         # self.plant_capacity = 1
 
     def add_animal(self, animal):
-        if len(self.animals) < 11:
+        if len(self.animals) < 1:
             self.animals.append(animal)
             print(f"{animal.species} lives in the River now")
         else:

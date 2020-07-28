@@ -7,11 +7,10 @@ class Forest(Environment):
 
     def __init__(self, name):
         super().__init__(name)
-        self.animal_capacity = 12
+        self.animal_capacity = 20
 
     def add_animal(self, animal):
-        if len(self.animals) < 1:
-            # 19
+        if len(self.animals) < 19:
             self.animals.append(animal)
             print(f"{animal.species} lives in the Forest now")
         else:

@@ -7,11 +7,10 @@ class Coastline(Environment):
 
     def __init__(self, name):
         super().__init__(name)
-        self.animal_capacity = 12
+        self.animal_capacity = 15
 
     def add_animal(self, animal):
-        if len(self.animals) < 1:
-            # 14
+        if len(self.animals) < 14:
             self.animals.append(animal)
             print(f"{animal.species} lives on the Coastline now")
         else:
