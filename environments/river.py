@@ -1,24 +1,19 @@
+import time
 from .environment import Environment
+
 
 class River(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.animal_capacity = 12
+        # self.plant_capacity = 1
 
     def add_animal(self, animal):
-          
-        try:
-            if len(self.animals) < 1:
-                self.animals.append(animal)
-        except ValueError:
-                print("Biome Full")
-                input('>> please hit enter')
-        except AttributeError:
-            print("Only Freshwater aquatic animals allowed")
+        if len(self.animals) < 1:
+            self.animals.append(animal)
+            print(f"{animal.species} lives in the River now")
+        else:
+            print(f'Sorry {animal.species}, we are full!')
 
-    def add_plant(self, plant):
-        try:
-            # if plant.freshwater and plant.requires_current:
-                self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+        time.sleep(2)
