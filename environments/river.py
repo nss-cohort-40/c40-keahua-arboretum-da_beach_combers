@@ -6,13 +6,13 @@ class River(Environment):
         super().__init__(name)
 
     def add_animal(self, animal):
+          
         try:
-            # if animal.aquatic and animal.cell_type == "hypertonic":
-                try:
-                    # if len(self.animals) < 12:
-                        self.animals.append(animal)
-                except ValueError:
-                    print("Biome Full")
+            # if len(self.animals) < 1:
+                self.animals.append(animal)
+        except ValueError:
+            print("Biome Full")
+            input('>> please hit enter')
         except AttributeError:
             print("Only Freshwater aquatic animals allowed")
 
