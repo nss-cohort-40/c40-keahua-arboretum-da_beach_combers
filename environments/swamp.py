@@ -12,6 +12,7 @@ class Swamp(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.animal_capacity = 8
+        self.plant_capacity = 12
         # self.name = name
         # self.inhabitants = []
 
@@ -19,7 +20,7 @@ class Swamp(Environment):
         return "This place has a bunch of animals in it"
 
     def add_animal(self, animal):
-        if len(self.animals) < 7:
+        if len(self.animals) < 8:
             self.animals.append(animal)
             print(f"{animal.species} lives in the Swamp now")
         else:
@@ -28,11 +29,9 @@ class Swamp(Environment):
         time.sleep(2)
 
     def add_plant(self, plant):
-        try:
-            # if plant.freshwater and plant.requires_current:
+        if len(self.plants) < 12:
             self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError("Must be swampy plants!!")
-
-    def __str__(self):
-        return self.name
+            print(f"{plant.species} lives in th River now")
+        else:
+            print(f'Sorry {plant.species}, we are full!')
+        time.sleep(3)

@@ -1,4 +1,3 @@
-# from animals import Aquatic
 from .environment import Environment
 import time
 
@@ -8,6 +7,7 @@ class Grassland(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.animal_capacity = 22
+        self.plant_capacity = 15
 
     def add_animal(self, animal):
         if len(self.animals) < 21:
@@ -19,9 +19,9 @@ class Grassland(Environment):
         time.sleep(2)
 
     def add_plant(self, plant):
-        try:
-            # if plant.freshwater and plant.requires_current:
+        if len(self.plants) < 15:
             self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError(
-                "Cannot add plants that require brackish water or stagnant water to a river biome")
+            print(f"{plant.species} lives in th River now")
+        else:
+            print(f'Sorry {plant.species}, we are full!')
+        time.sleep(3)
